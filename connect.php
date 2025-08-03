@@ -3,11 +3,23 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// Database configuration
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "mark_db";
+<?php
+$servername = "tramway.proxy.rlwy.net"; // Host
+$username = "root";                     // User
+$password = "dHrhwLigrduZXsCyADZQJyFFTyoQTosk"; // Password
+$database = "railwayt";                 // DB name
+$port = 42514;                          // Port
+
+// Connect using MySQLi
+$conn = new mysqli($servername, $username, $password, $database, $port);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully!";
+?>
+
 
 // Initialize variables
 $success_message = "";
